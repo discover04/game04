@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/vegan.css" rel="stylesheet">
+    <link href="css/responsive1.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<style>
+    *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: play;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+body{
+    background-color:#141229;
+}
+.navbar{
+    background-color:rgb(11, 11, 46);
+    width:100%;
+    position: fixed;
+    z-index: 1;
+    height:80px;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+    box-shadow:0px 5px 15px 5px black; ;
+}
+.firstpart ul{
+    display: flex;
+    list-style-type:none;
+}
+.firstpart a{
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing:2px;
+    padding:15px 20px;
+    font-family: 'Play', sans-serif;
+    font-weight:700;
+}
+.firstpart a:hover{
+    color:rgb(10, 173, 165);
+}
+.drop{
+    position: relative;
+}
+.dropdown{
+    position: absolute;
+    background-color: #141229;
+    display:none;
+}
+.drop:hover .dropdown{
+    display: block;
+}
+.thirdpart{
+    display: none;
+}
+#bar {
+    position:relative;
+    display:none;
+    right:40px;
+    font-size:2rem;
+    cursor:pointer;
+}
+#cross {
+    margin:20px;
+    font-size:2.3rem;
+    cursor:pointer;
+    display:none;
+}
+#sidebar{
+    display:none;
+    position:absolute;
+    top:0px;
+    right:0px;
+    height:650px;
+    width:200px;
+    background-color:grey;
+    z-index:2;
+    background-color: black;
+    /* margin-top: 60px; */
+}
+#sidebar  ul{
+    list-style-type: none;
+    padding:20px;
+}
+#sidebar ul li{
+    font-size:1.3rem;  
+    padding:10px;
+}
+#sidebar ul li a{
+    display: block;
+    padding:10px;
+}
+#sidebar ul a:hover{
+    color:rgb(10, 173, 165);
+    margin-left:20px;
+    transition:0.5s;
+}
+.sidebardropdown{
+    display: none;
+}
+.sidebardrop:hover .sidebardropdown{
+    display: block;
+}
+.secondpart button{
+    padding:10px 20px;
+    margin-right:10px;
+    font-size: 1.2rem;
+    border:none;
+    cursor: pointer;
+    background-color:transparent;
+    color:white;
+    border:2px solid rgb(10, 173, 165);
+}
+.secondpart button:hover{
+    background-color: rgb(10, 173, 165);
+    color:white;
+    border-radius: 30px;
+    transition: ease 1s;
+}
+
+.imageslider{
+    display: flex;
+    /* width:100%; */
+    padding-top:80px;
+    position: relative;
+}
+.myslides{
+    height:600px;
+    width:100%;
+}
+.myslides img{
+     height:100%;
+     width:100%;
+}
+.fade{
+    animation-name: fad;
+    opacity:1;
+    animation-duration:1s;
+}
+@keyframes fad{
+    from{
+        opacity:0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.content{
+    position: absolute;
+    text-align: center;
+    color:white;
+    padding:20px 100px;
+}
+.content span{
+    font-size:2.5rem;
+    font-family: 'Oswald', sans-serif;
+}
+.content h3{
+    font-size:6rem;
+    margin-top:40px;
+    font-weight:500;
+    letter-spacing: -2px;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 0 2px 4.8px rgba(30,29,50,0.3);
+}
+.content p{
+    font-size: 1.1rem;
+    margin-top:60px;
+    letter-spacing:2px;
+    line-height: 20px;
+    font-family: 'Play', sans-serif;
+}
+.content button{
+    padding:15px 50px;
+    font-size: 1.2rem;
+    border:none;
+    background-color: rgb(58, 218, 202);
+    border-radius: 20px;
+    margin-top:30px;
+    color:white;
+}
+.content button:hover{
+    transform:rotateX(360deg);
+    transition: ease 2s;
+}
+.second{
+    max-width:100%;
+    display: flex;
+    padding:100px 10px;
+    justify-content: space-around;
+}
+.firstimage{
+    position: relative;
+    /* max-height:400px;
+    max-width:300px; */
+}
+.firstimage p{
+    position: absolute;
+    bottom:40px;
+    left:45%;
+    color:white;
+    font-size:4rem;
+}
+.secondimage{
+    position: relative;
+    /* max-height:400px;
+    max-width:300px; */
+}
+.secondimage p{
+    position:absolute;
+    left:35%;
+    bottom:40px;
+    color: white;
+    font-size:4rem;
+}
+.firstimage img:hover{
+    transform: rotateY(360deg);
+    transition: ease-in-out 2s;
+}
+.secondimage img:hover{
+    transform: rotateY(360deg);
+    transition: ease-in-out 2s;
+}
+.event{
+    background-color:rgb(33, 29, 53);
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    margin:0px auto;
+    border-radius: 0px 0px 20px 20px;
+}
+.eventslider{
+    display: flex;  
+    position: relative;
+}
+.photoslide{
+    width:100%;
+    height:600px;  
+}
+.photoslide img{
+    height:100%;
+    width:100%;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size:3rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .eventcontent{
+      padding:30px 50px;
+      color:white;
+      font-family: play;
+  }
+  .event h1{
+      font-size: 1.1rem;
+      color:rgb(10, 173, 165);
+      margin-bottom:20px;
+  }
+  .event span{
+      font-size:1.5rem;
+  }
+  .event p{
+      margin-top:30px;
+      line-height:20px;
+      letter-spacing:1.5px;
+  }
+.goy{
+    display: flex;
+    padding:90px 10px;
+    background-color: rgb(29, 26, 44);
+    color:white;
+    margin:150px auto;
+    width:90%;
+    border-radius: 20px;
+}
+.goycontent{
+    width:50%;
+    padding-left:100px;
+    font-family: play;
+}
+.goycontent h1{
+    margin-bottom:10px;
+    color:rgb(58, 218, 202);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.goycontent span{
+    margin:20px 0px;
+    font-size:1.6rem;
+    font-weight:bold;
+    letter-spacing: 1px;
+}
+.goycontent p{
+    margin:20px 0px;
+    line-height:22px;
+    letter-spacing: 1px;
+}
+.goyimg{
+    width:50%;
+    padding: 20px;
+    border-radius: 20px;
+}
+.goyimg img{
+    width:100%;
+    height:100%;
+    border-radius: 20px;
+}
+.goycontent button{
+    padding:15px 40px;
+    color:white;
+    background-color:rgb(46, 184, 170);
+    border:none;
+    font-size: 1.2rem;
+    border-radius:10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.review{
+    margin:0px auto;
+    width:90%;
+    padding:30px 0px;
+    position:relative;
+}
+.review h1{
+    text-align: center;
+    color: white;
+    font-size:3rem;
+}
+.inner{
+    display: flex;
+}
+.reviewslide{
+    
+     display: flex;
+    justify-content: space-around;
+    width:100%;
+    height:100%;
+    padding:80px 30px;
+}
+.rev{
+   width:40%;
+   min-height:350px;
+   align-self:center;
+   padding:40px;
+   position:relative;
+   border-radius: 20px;
+   background-color: #292845;
+   color:white;
+}
+.rev h1{
+    text-align: center;
+    margin-top:30px;
+    font-size: 2.2rem;
+}
+.rev h2{
+    text-align: center;
+    margin-top:10px;
+    color:skyblue;
+}
+.rev p{
+    margin-top: 20px;
+    line-height: 22px;
+    font-size: 1rem;
+    font-family: play;
+    text-align: center;
+}
+.rev img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    position: absolute;
+    top:-55px;
+    left:155px;
+}
+.membership{
+    margin:100px 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around; 
+}
+.business .price{
+    background-color:#5c9ddd;
+}
+.premium .price{
+    background-color:#7c69e3;
+}
+.sbp{
+    color:white;
+    background-color: #292845;
+    width:28%;
+    border-radius: 20px;
+}
+.sbp h2{
+    font-size: 1.5rem;
+    text-align: center;
+    padding:20px 0px;
+}
+.sbp h2:hover{
+    color:skyblue;
+}
+.price{
+    background-color: rgb(40, 158, 179);
+    text-align: center;
+    padding:20px 0px;
+}
+.price span:nth-of-type(1){
+    font-size: 1.5rem;
+}
+.price span:nth-of-type(2){
+    font-size:2.5rem;
+}
+.price h1{
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.membership ul{
+    text-align: center;
+    padding:20px 60px;
+    list-style-type: none;
+}
+.membership li{
+    /* margin:20px 20px; */
+}
+.membership li:nth-of-type(2){
+    border-bottom:1px solid white;
+    border-top:1px solid white;
+}
+.membership li a{
+    text-decoration: none;
+    display: block;
+    font-size: 1.1rem;
+    padding:25px 10px;
+}
+.membtn{
+    padding:15px 40px;
+    font-size: 1.1rem;
+    /* margin-left: 25%;
+    margin-bottom: 50px; */
+    margin:20px 0px 50px 25%;
+    background-color: rgb(40, 158, 179) ;
+    border:none;
+    color:white;
+    border-radius:10px;
+    cursor: pointer;
+}
+.membtn:hover{
+    background-color: rgb(20, 71, 80,0.9);
+    transition: 1s;
+}
+.team{
+    padding: 0px 20px;
+   
+}
+.team h1{
+    text-align: center;
+    color: white;
+    padding:10px 0px 60px 0px;
+    font-size:2.5rem;
+}
+.team_members{
+    display: flex;
+    justify-content: space-around;
+}
+.member{
+    flex-basis: 23%;
+    min-height:300px;
+    border-radius:15px;
+    background-color: #292845;
+}
+.team-img{
+    width:100%;
+    height:168.6px;
+   
+}
+.team-img:hover{
+    opacity: 0.4;
+    transition: 0.7s;
+}
+.team-img img{
+    height: 100%;
+    width: 100%;
+    border-radius:15px 15px 0px 0px;
+}
+.team-content{
+    color:white;
+    padding:40px 20px;
+    text-align: center;
+}
+.team-content ul{
+    list-style-type: none;
+}
+.team-content ul li {
+    display: inline;
+}
+.team-content i{
+    color:#1bc2ca;
+    padding:2rem 10px 0px 10px;
+    font-size: 1.5rem;
+}
+
+.team-content h2{
+    margin-bottom:20px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+.team-content h2:hover{
+    color: #1bc2ca;
+    transition:0.6s;
+}
+.team-content span{
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #1bc2ca;
+}
+.contact{
+    margin:50px auto;
+    text-align: center;
+    color:white; 
+    padding:20px;
+}
+.contacthead h1{
+    font-size:2rem;
+    letter-spacing: 2.3px;
+    margin:20px 0px;
+}
+.contacthead span{
+     font-size:1rem;
+     color:white;
+     font-weight: 100;
+}
+.contactform{
+    margin:50px 0px;
+   display: flex;
+   justify-content: center;
+   font-size:1.3rem;
+}
+.form-first{
+    line-height:50px;
+    font-size: 1.6rem;
+}
+.form-second{
+    margin-left: 15%;
+    text-align:center;
+}
+.form-second input{
+    padding:15px 10px;
+    margin:13px 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: #292845;
+}
+.msg{
+    width: 95%;
+}
+input[type="submit"]{
+     margin-top: 20px;
+     padding:10px 20px;
+     font-size: 1.1rem;
+     color:white;
+     background: #1bc2ca;
+     border:none;
+     border-radius: 10px;
+}
+.yourlocation{
+    text-align: center;
+}
+iframe{
+    height:500px;
+    width:80%;
+    margin-bottom: 20px;
+}
+footer{
+    color:white;
+    padding:20px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+footer:hover{
+    color:#1bc2ca;
+    transition: 0.6s;
+    transform: rotateX(360deg);
+}
+
+
+ 
+@media only screen and (max-width:1200px) {
+    .content span{
+        font-size:2rem;
+    }
+    .content h3{
+        font-size:4rem;
+        line-height:100px;
+    }
+    .content p{
+        font-size: 1rem;
+        margin-top:40px;
+    }
+   
+    .firstimage {
+        max-height:300px;
+        max-width:400px;
+    }
+    .firstimage img{
+        height: 100%;
+        width:100%;
+    }
+    .secondimage{
+        max-height:350px;
+        max-width:400px;
+    }
+    .secondimage img{
+        height: 100%;
+        width:100%
+    }
+    .firstimage p{
+       font-size:2.5rem;
+    }
+    .secondimage p{
+        font-size:2.5rem;
+    }
+    .team{
+        padding: 0px 30px;
+      
+} 
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .content span{
+        font-size:2rem;
+    }
+    .content h3{
+        font-size: 4rem;
+        line-height:80px;
+    }
+    .content p{
+        font-size: 1rem;
+        margin-top:40px;
+    }
+    .content button{
+        padding:10px 30px;
+        font-size: 1rem;
+    }
+    .second{
+        padding:70px 20px 40px 20px;
+        min-height:450px;
+        min-width:100%;
+    }
+    .firstimage {
+        max-height:250px;
+        max-width:350px;
+    }
+    .firstimage img{
+        height: 100%;
+        width:100%;
+    }
+    .secondimage{
+        max-height:250px;
+        max-width:350px;
+    }
+    .secondimage img{
+        height: 100%;
+        width:100%
+    }
+    .firstimage p{
+       font-size:2.5rem;
+    }
+    .secondimage p{
+        font-size:2.5rem;
+    }
+    .event{
+        width:80%;
+    }
+    .photoslide{
+        height:350px;  
+    }
+    .goy{
+        padding:50px 10px;
+        margin:50px auto;
+        width:90%;
+    }
+    .goycontent{
+        padding-left:30px;
+    }
+    .goyimg{
+        max-height:400px;
+    }
+    .review{
+        width:95%;
+    }
+    .reviewslide{
+       padding:80px 20px 10px 20px;
+    }
+    .rev{
+        padding:20px;
+     }
+     .rev img{
+        width:90px;
+        height:90px;
+        left:115px;
+    }
+    .rev h1{
+        margin-top:30px;
+        font-size: 2rem;
+    }
+    .rev h2{
+       font-size: 1.3rem; 
+    }
+    .standard{
+        flex-basis:40%;
+        margin-bottom: 40px;
+    }
+    .business{
+        flex-basis: 40%;
+        margin-bottom: 40px;
+    }
+    .premium{
+        flex-basis:40%;
+
+    }
+    .team_members{
+        display: grid;
+        grid-template-columns:repeat(2,40%);
+        grid-template-rows:repeat(2,min-content);  
+    }
+    .member{
+        width:90%;
+        margin-bottom: 20px;
+    }
+  
+}
+    
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .content span{
+        font-size:1.5rem;
+    }
+    .content h3{
+        font-size:3rem;
+        line-height:80px;
+    }
+    .content p{
+        font-size: 0.9rem;
+        margin-top:60px;
+    }
+    .content button{
+        padding:10px 30px;
+        font-size: 1rem;
+    }
+    .thirdpart{
+        display:block;
+    }
+    #bar{
+        display:block;
+    }
+    .firstpart{
+        display: none;
+    }
+    .secondpart button{
+        margin-left: 20px;
+    }
+    .second{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .second{
+        padding:70px 20px 40px 20px;
+        min-height:450px;
+        min-width:100%;
+    }
+    .firstimage {
+        max-height:250px;
+        max-width:450px;
+        margin-bottom: 30px;
+    }
+    .secondimage{
+        max-height:250px;
+        max-width:450px;
+    }
+    .goy{
+        flex-direction:column;
+        width:75%;
+    }
+    .goycontent{
+        width:90%;
+        padding:0px 10px;
+    }
+    .goyimg{
+        align-self: center;
+        width:90%;
+        padding: 20px;
+    }
+    .goycontent button{
+        margin-left:160px;
+    }
+    .reviewslide{
+        flex-direction:column;
+    }    
+    .rev{
+        width:60%;
+        margin-bottom:50px;
+    }
+    .rev p{
+        font-size: 1rem;
+    }
+    .rev img{
+        top:-55px;
+        left:145px;
+    }
+    .sbp{
+        flex-basis: 55%;
+    }
+    .team_members{
+        display: grid;
+        grid-template-columns:repeat(1,60%);
+        grid-template-rows:repeat(1,min-content);  
+    }
+    .team-img{
+        height:200px;
+    }
+    .member{
+        width:90%;
+        margin-bottom: 20px;
+    }
+    .contactform{
+        flex-direction: column;
+    }
+    .form-first{
+        line-height:30px;
+        font-size: 1.2rem;
+    }
+    .form-second{
+        margin-left:0%;
+    }
+    .msg{
+        width:65%;
+    }
+    .form-second input{
+        padding:20px 19px;
+        margin:13px 10px;
+    }
+    input[type="submit"]{
+        margin-top: 20px;
+        padding:15px 40px;
+   }
+   footer{
+    font-size: 1.2rem;
+}
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 620px) {
+    .content{
+        padding:20px 0px;
+    }
+    .content span{
+        font-size:1.5rem;
+    }
+    .content h3{
+        font-size:2.5rem;
+        line-height:50px;
+    }
+    .content p{
+        font-size: 1rem;
+        padding:0px 15px;
+        margin-top:40px;
+        letter-spacing:1px;
+        line-height:20px;
+    }
+    .content button{
+        padding:10px 30px;
+        font-size: 1rem;
+    } 
+    .firstimage {
+        max-height:250px;
+        max-width:350px;
+    }
+    .secondimage{
+        max-height:250px;
+        max-width:350px;
+    } 
+    .event{
+        width:90%;
+    }
+    .photoslide{
+        height:350px; 
+         
+    }   
+    .eventcontent{
+        padding:30px 25px;
+    }
+    .event p{
+        margin-top:20px;
+        line-height:20px;
+        letter-spacing:1.4px;
+    }
+    .goy{
+        width:90%;
+    }
+    .goycontent{
+        width:90%;
+        padding:0px 10px;
+    }
+    .goyimg{
+        align-self: center;
+        width:90%;
+        padding: 20px 0px;
+    }
+    .goycontent button{
+        margin-left:10px;
+        padding:10px 30px;
+
+    }
+    .reviewslide{
+        flex-direction:column;
+    }    
+    .rev{
+        width:70%;
+        margin-bottom:60px;
+        padding:20px;
+        min-height:300px;
+    }
+    .rev h1{
+        margin-top:20px;
+        font-size:1.5rem;
+    }
+    .rev h2{
+        margin-top:10px;
+    }
+    .rev p{
+        font-size: 0.8rem;
+    }
+    .rev img{
+        top:-55px;
+        left:110px;
+    }
+    .sbp{
+        flex-basis:65%;
+    }
+    .sbp h2{
+        font-size: 1.3rem;
+        padding:10px 0px;
+    }
+    .price{
+        padding:15px 0px;
+    }
+    .price span:nth-of-type(1){
+        font-size: 1.2rem;
+    }
+    .price span:nth-of-type(2){
+        font-size:1.7rem;
+    }
+    .membership ul{
+        padding:10px 30px;
+    }
+    .membership li a{
+        font-size: 1rem;
+        padding:20px 10px;
+    }
+    .membtn{
+        padding:10px 40px;
+    }
+    .team_members{
+        display: grid;
+        grid-template-columns:repeat(1,90%);
+        grid-template-rows:repeat(1,min-content);  
+    }
+    .member{
+        margin-left: 20px;
+    }
+    .contactform{
+        flex-direction: column;
+    }
+}
+
+/* 320px — 480px */
+@media only screen and (max-width:480px){
+    .content p{
+        font-size: 1.2rem;
+    }
+    .content span{
+        font-size:1.2rem;
+        margin-top: 20px;
+    }
+    .content h3{
+        font-size:2.5rem;
+        margin-top:40px;
+        line-height:60px; 
+    }
+    .content p{
+        font-size: 0.8rem;
+        line-height:17px;
+        margin-top:30px;
+    }
+    .firstimage {
+        margin:20px 20px;
+    }
+    .firstimage p{ 
+        font-size: 1.5rem;
+    }
+    .secondimage{
+        margin:0px 20px;
+    }
+    .secondimage p{ 
+        font-size: 1.5rem;
+    }
+    .photoslide{
+        height:230px;   
+    }   
+    .eventcontent{
+        padding:15px;
+    }
+    .event p{
+        margin-top:20px;
+        line-height:20px;
+        letter-spacing:1.4px;
+        font-size: 0.9rem;
+    }
+    .prev, .next {
+        font-size: 2rem;
+    }
+    .event h1{
+        font-size: 1rem;
+        margin-bottom:15px;
+    }
+    .event span{
+        font-size:1.2rem;
+        font-weight: bold;
+    }
+    .goy{
+        padding:20px 10px;
+    }
+    .goycontent{
+        width:95%;
+        padding:0px 5px;
+        text-align:start;
+    }
+    .goycontent span{
+        margin:10px 0px;
+        font-size:1.3rem;
+    }
+    .goyimg{ 
+        width:95%;
+        padding: 20px 0px;
+    }
+    .goycontent button{
+        display: none;
+    }
+    .review{
+        width:100%;
+        padding:15px 0px;
+    }
+    .review h1{
+        font-size:2rem;
+    }
+    .reviewslide{
+        padding:20px 2px;
+        width:100%;
+    }
+    .rev{
+       width:95%;
+       min-height:250px;
+       padding:10px;
+       margin:80px;
+    }
+    .rev h1{
+        margin-top:15px;
+        font-size:1.6rem;
+    }
+    .rev h2{
+        margin-top:5px;
+        font-size: 1.1rem;
+    }
+    .rev p{
+        margin-top:10px;
+        font-size: 0.8rem;
+    }
+    .rev img{
+        width:60px;
+        height:60px;
+        top:-35px;
+        left:115px;
+    }
+    .membership{
+        margin:10px 0px;
+    }
+    .sbp{
+        flex-basis:75%;
+    }
+    .price{ 
+        padding:5px 0px;
+    }
+    .price span:nth-of-type(1){
+        font-size: 1rem;
+    }
+    .price span:nth-of-type(2){
+        font-size:1.6rem;
+    }
+    .price h1{
+        font-size: 1rem;
+    }
+    .membtn{
+        padding:5px 30px;
+        font-size:1rem;
+    }
+    .membership ul{
+        padding:10px 25px;
+    }
+    .membership li a{
+        font-size: 1rem;
+        padding:15px 10px;
+    }
+    .team{
+        width:100%;
+        margin-top:30px;
+        padding:10px;
+    }
+    .team h1{
+        padding:20px 0px;   
+    }
+    .team_members{
+        grid-template-columns:repeat(1,85%);  
+    }
+    .member{
+        margin:10px 0px;
+        width: 100%;
+    }
+    .team-content{
+        padding:20px 10px;
+    }
+    .team-content i{
+        padding:20px 10px;
+        font-size: 1.5rem;
+    }
+    .contact{
+        margin-bottom:15px;
+    }
+    iframe{
+        height:400px;
+    }
+    footer{
+        font-size: 1rem;
+    }
+ 
+
+
+}
+
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="firstpart">
+
+            <ul>
+                <li><a href="">SchoolAMP</a></li>
+                <div class="drop">
+                 <li><a href="">Demo Pages</a></li>
+                    <div class="dropdown">
+                        <li><a href="">Demo 1</a></li>
+                        <li><a href="">Demo 1</a></li>
+                    </div>
+                </div>  
+                <li><a href="">Watchvideo</a></li>
+                <li><a href="">Blocks</a></li>
+
+            </ul>
+        </div>
+        <div class="secondpart">
+            <button>Buy Now</button>   
+        </div>
+        <div class="thirdpart">
+            <div id="bar">
+                <i class="fas fa-bars"></i>
+            </div> 
+            
+            <div id="sidebar">
+                <div id="cross">
+                    <i class="fas fa-times"></i>
+                </div>
+                <ul>
+                    <li><a href="">SchoolAMP</a></li>
+                    <div class="sidebardrop">
+                    <li><a href="">Demo Pages</a></li>
+                        <div class="sidebardropdown">
+                            <li><a href="">Demo 1</a></li>
+                            <li><a href="">Demo 1</a></li>
+                        </div>
+                    </div>  
+                    <li><a href="">Watchvideo</a></li>
+                    <li><a href="">Blocks</a></li>
+
+                </ul>     
+            </div>
+        </div>
+    </div>
+    <section>
+            <div class="imageslider">
+                <div class="myslides fade">
+                    <img src="images/image1.jpg">
+                </div>
+                <div class="myslides fade">
+                    <img src="images/image3.jpg">
+                </div>
+                <div class="content">
+                    <span>
+                        Gamesite Template
+                    </span>
+                    <h3>RESPONSIVE WEB
+                        <br> DESIGN TEMPLATE</h3>
+                    <p>Gamers everywhere, we're playing the most prominent PC games in 2019. Featuring both classic games and brand-new games, this listing of the most played computer game on COMPUTER now consists of first-person shooters, multiplayer fight royales, MOBAs, battling games, RPGs, and collectible card video games. Don't be shy to use Responsive Web Design Template.</p>
+                        <button>View More</button>
+                </div>
+            </div>
+            <div class="second">
+                <div class="firstimage"><img src="images/image4.jpg">
+                    <p>PC</p>
+                </div>
+                <div class="secondimage"><img src="images/image5.jpg">
+                    <p>console</p>
+                </div>
+            </div>
+    </section>
+    <!-- start of event -->
+    <section>
+        <div class="event">
+            <div class="eventslider">
+                <div class="photoslide">
+                    <img src="images/image9.jpg">
+                </div>
+                <div class="photoslide">
+                    <img src="images/image10.jpg">
+                </div>
+                <div class="photoslide">
+                    <img src="images/image6.jpg">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="eventcontent">
+                <h1>Event</h1>
+              <span>Gaming Festival 2021</span> 
+               <p>GAME Esports also Events- formerly known as Multiplay- has revealed it will be taking the Sleeplessness Gaming Celebration international. Sleeping disorders has this week validated a multi-year agreement with The International Event Monitoring Group as well as BME Global to bring the celebration to brand-new areas, consisting of Egypt, Dubai, Saudi Arabia, South America, and Australia.
+               </p>
+            </div>
+        </div>
+    </section>
+    <!-- game of year section start -->
+    <section>
+        <div class="goy">
+            <div class="goycontent">
+                <h1>News</h1>
+                <span>Game of the year 2021</span>
+                <p>Year-end listings are a squandered possibility, a relic from the prime time of publications as well as newspapers, a recap of the referrals you missed due to the fact that a concern obtained lost in the mail or consumed by the household pet dog.
+
+
+                  </p>  
+                  <p>They have a tendency to be a little bit foggy (why did I like this video game, once again?) and incomplete (what came out in January?). Worse, they arrive when we're too active with the holidays to place the lists to their meant usage. A list of the best games of the year is more useful, a lot more thoughtful also a lot more full, our team believe, if it collects all year long.</p>
+                  <button>
+                    Read more
+                </button>
+            </div>
+            <div class="goyimg">
+                <img src="images/image8.jpg">
+            </div>
+        </div>
+    </section>
+       <!-- game of year section end -->
+          <!-- review section start -->
+    <div class="review">
+        <h1> REVIEW</h1>
+        <div class="inner">
+            <div class="reviewslide">
+                <div class="firstrev rev">
+                    <img src="images/image11.jpg">
+                    <h1>Lina Li</h1>
+                    <h2>Gamer</h2>
+                    <p>«One last note on eligibility: restricting the choice to video games that were launched this calendar year no more shows the method people make as well as play games, so we have actually enabled games that were released earlier yet got really considerable updates, were released on new platforms, or otherwise made a significant effect.»
+                        </p>
+                    </div>
+                <div class="secondrev rev">
+                    <img src="images/image12.jpg">
+                    <h1>Alison Portman</h1>
+                    <h2>Gamer</h2>
+                    <p>«Don't fret excessive about the position. It's a fun with light exercise. Eventually, we suggest all of these games. That's why we have actually consisted of a little bit on what makes each one special. Responsive Web Design Template is awesone thing.»»
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="reviewslide">
+                <div class="firstrev rev">
+                    <img src="images/image9.jpg">
+                    <h1>Nole Musk</h1>
+                    <h2>Gamer</h2>
+                    <p>«As our individual video gaming habits also the computer game landscape have altered, several defects have appeared in the ballot system. One was that it would over-represent games that we appreciated playing in the office together, like FIFA or Overwatch.»
+                        </p>
+                    </div>
+                <div class="secondrev rev">
+                    <img src="images/image8.jpg">
+                    <h1>Lina Li</h1>
+                    <h2>Gamer</h2>
+                    <p>«One last note on eligibility: restricting the choice to video games that were launched this calendar year no more shows the method people make as well as play games, so we have actually enabled games that were released earlier yet got really considerable updates, were released on new platforms, or otherwise made a significant effect.»
+                        </p>
+                </div>
+            </div>
+        </div>
+            <a class="prev" onclick="slideplus(-1)">&#10094;</a>
+            <a class="next" onclick="slideplus(1)">&#10095;</a>
+    </div>
+    <!-- review section end -->
+    <!-- membership start -->
+    <div class="membership">
+        <div class="sbp standard">
+            <h2>STANDARD</h2>
+            <div class="price">
+                <span>$</span><span>50</span>
+                <h1>per month</h1>
+            </div>
+            <ul>
+                <li><a href="">Personal Use</a></li>
+                <li><a href="">One Site</a></li>
+                <li><a href="">Email Support</a></li>
+            </ul>
+            <button class="membtn">view more</button>
+        </div>
+        <div class="sbp business">
+            <h2>BUSINESS</h2>
+            <div class="price">
+                <span>$</span><span>100</span>
+                <h1>per month</h1>
+            </div>
+            <ul>
+                <li><a href="">Commercial Use</a></li>
+                <li><a href="">Unlimited Sites</a></li>
+                <li><a href="">Email Support</a></li>
+            </ul>
+            <button class="membtn">view more</button>
+        </div>
+        <div class="sbp premium">
+            <h2>PREMIUM</h2>
+            <div class="price">
+                <span>$</span><span>150</span>
+                <h1>per month</h1>
+            </div>
+            <ul>
+                <li><a href="">Commercial Use</a></li>
+                <li><a href="">Unlimited Sites</a></li>
+                <li><a href="">Premium Support</a></li>
+            </ul>
+            <button class="membtn">view more</button>  
+        </div>
+    </div>
+     <!-- membership end -->
+     <!-- teaM MEMBER -->
+     <div class="team">
+         <h1>OUR TEAM</h1>
+         <div class="team_members">
+            <div class="member mem1">
+                <div class="team-img">
+                    <img src="images/a.jpg">
+                </div>
+                <div class="team-content">
+                    <h2>Adrian Carey</h2>
+                    <span>Founder</span> 
+                    <ul>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="member mem2">
+                <div class="team-img">
+                    <img src="images/b.jpg">
+                </div>
+                <div class="team-content">
+                <h2>Stephen Jenkinc</h2>
+                    <span>Manager</span> 
+                    <ul>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="member mem3">
+                <div class="team-img">
+                    <img src="images/c.jpg">
+                </div>
+                <div class="team-content">
+                <h2>Susan Crossman</h2>
+                    <span>Designer</span> 
+                    <ul>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="member mem4">
+                <div class="team-img">
+                    <img src="images/d.jpg">
+                </div>
+                <div class="team-content">
+                <h2>Jennifer Bawerman</h2>
+                    <span>Developer</span> 
+                    <ul>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>  
+                </div>
+        </div>
+        </div>
+     </div>
+     <!-- team_members end here -->
+     <!-- outcontact starts from here -->
+     <section>
+        <div class="contact">
+            <div class="contacthead">
+                <h1>OUR CONTACTS</h1>
+                <span><em>Fan? Drop a note!</em></span>
+            </div>
+            <div class="contactform">
+                <div class="form-first">
+                    <span>Chicago,US</span><br>
+                    <span>phone:+05344</span><br>
+                    <span>Email:mail@mail.com</span><br>
+                </div>
+                <div class="form-second">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder=" Email"><br>
+                    <input type="text" placeholder="Message" class="msg"><br>
+                    <input type="submit" value="SEND">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- map start here
+     -->
+     <div class="yourlocation">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44829.18843349065!2d83.58759474768522!3d25.581535953389587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1625766120583!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+     </div>
+        <!-- outcontact starts from here -->
+        <footer>
+            <p>© Copyright 2019 Mobirise - Responsive Web Design Template - All Rights Reserved </p>
+        </footer>
+    <script>
+        var slideindex=0;
+        automatic();
+        function automatic(){
+            var i;
+            var slides=document.getElementsByClassName("myslides");
+            for(i=0;i<slides.length;i++){
+                slides[i].style.display="none";
+            }
+            slideindex++;
+            if(slideindex > slides.length)
+            {
+                slideindex=1;
+            }
+            slides[slideindex-1].style.display="block";
+
+            setTimeout(automatic,4000);
+            
+            }
+        
+    </script>
+    <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("photoslide");
+  if (n > slides.length) 
+    {
+        slideIndex = 1;
+    }
+  if (n < 1) 
+  {
+      slideIndex = slides.length;
+    }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slideindex++;
+  slides[slideIndex-1].style.display = "block";
+}
+    </script>
+    <!-- review script -->
+    <script>
+        var slideIndex = 1;
+slideshow(slideIndex);
+
+// Next/previous controls
+function slideplus(n) {
+  slideshow(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  slideshow(slideIndex = n);
+}
+
+function slideshow(n) {
+  var i;
+  var slides = document.getElementsByClassName("inner");
+  if (n > slides.length) 
+    {
+        slideIndex = 1;
+    }
+  if (n < 1) 
+  {
+      slideIndex = slides.length;
+    }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slideindex++;
+  slides[slideIndex-1].style.display = "block";
+}
+    </script>
+    <script>
+        var x= document.getElementById("bar");
+        var y= document.getElementById("cross");
+         
+         x.addEventListener("click",opensidebar);
+         y.addEventListener("click",closesidebar);
+        function opensidebar(){
+             document.getElementById("sidebar").style.display="block";
+             document.getElementById("bar").style.display="none";
+             document.getElementById("cross").style.display="block";   
+         }
+           function closesidebar(){
+               document.getElementById("sidebar").style.display="none";
+               document.getElementById("bar").style.display="block";
+             document.getElementById("cross").style.display="none";   
+          }
+    </script>
+</body>
+</html>
